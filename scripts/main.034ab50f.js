@@ -1,0 +1,1 @@
+!function(){"use strict";var a=new MilkCocoa("postidiray64.mlkcca.com"),b=a.dataStore("hello");$(document).on("click","#push",function(){b.push({message:"Hello!"})}),b.on("push",function(a){console.log(a.value.message)})}();
