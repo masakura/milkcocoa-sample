@@ -40,6 +40,9 @@
       "jquery": true,
       "jasmine": true
     },
+    "globals": {
+      "MilkCocoa": false
+    },
     "rules": {
       "quotes": [
         2,

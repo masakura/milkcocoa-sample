@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var milkcocoa = new MilkCocoa("postidiray64.mlkcca.com");
+  var milkcocoa = new MilkCocoa('postidiray64.mlkcca.com');
   var dataStore = milkcocoa.dataStore('hello');
 
   $(document).on('click', '#push', function () {
@@ -9,6 +9,6 @@
   });
 
   dataStore.on('push', function (e) {
-    console.log(e.value.message);
+    console.log(e.value.message); // eslint-disable-line no-console
   });
 })();
