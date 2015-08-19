@@ -23,7 +23,19 @@
   </head>
   <body>
     <div class="container">
-      <button id="push" class="btn btn-primary" type="button">PUSH</button>
+      <div class="input-group">
+        <input id="name-input" class="form-control" type="text" placeholder="Your name...">
+      </div>
+
+      <ul id="messages" class="list-group">
+      </ul>
+
+      <div class="input-group">
+        <input id="message-input" class="form-control" type="text" placeholder="Message..."/>
+        <span class="input-group-btn">
+          <button id="send-message" class="btn btn-primary" type="button">Send</button>
+        </span>
+      </div>
     </div>
 
 

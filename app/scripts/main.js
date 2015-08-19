@@ -4,11 +4,24 @@
   var milkcocoa = new MilkCocoa('postidiray64.mlkcca.com');
   var dataStore = milkcocoa.dataStore('hello');
 
-  $(document).on('click', '#push', function () {
-    dataStore.push({message: 'Hello!'});
+  $(document).on('click', '#send-message', function () {
+    var name = $('#name-input').val();
+    var message = $('#message-input').val();
+
+    $('#message-input').val('');
+
+    dataStore.push({
+      name: name,
+      message: message
+    });
   });
 
   dataStore.on('push', function (e) {
-    console.log(e.value.message); // eslint-disable-line no-console
+    var message = e.value.message;
+
+    $('<li>')
+      .addClass('list-group-item')
+      .text(message)
+      .appendTo('#messages');
   });
 })();
