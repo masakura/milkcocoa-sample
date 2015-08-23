@@ -10,13 +10,13 @@
 
     $('#message-input').val('');
 
-    dataStore.push({
+    dataStore.send({
       name: name,
       message: message
     });
   });
 
-  dataStore.on('push', function (e) {
+  dataStore.on('send', function (e) {
     var message = e.value.message;
 
     $('<li>')
